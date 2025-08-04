@@ -3,5 +3,5 @@
 
 i
 j
-t=i+j
+t=a[i]+a[j]
 if t<k
