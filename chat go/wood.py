@@ -1,5 +1,7 @@
-n,k = map(int,input().split())
-a = list(map(int,input().split()))
+fi = open('cg.inp','r')
+fo = open('cg.out','w')
+n,k = map(int,fi.readline().split())
+a = list(map(int,fi.readline().split()))
 a = [0]+a+[0]
 i = j = 1
 T = a[i]
@@ -12,4 +14,4 @@ while (i<=j) and (j<=n):
         lmin = min(lmin,j-i+1)
         T -= a[i]
         i += 1
-print(lmin)
+fo.write(str(lmin))

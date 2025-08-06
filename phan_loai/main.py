@@ -1,4 +1,4 @@
-fi = open("./cploai.inp","r")
+fi = open("cploai.inp","r")
 fo = open("cploai.out","w")
 n = int(fi.readline())
 arr = fi.readline()
