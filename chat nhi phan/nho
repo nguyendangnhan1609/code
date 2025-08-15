@@ -1,0 +1,31 @@
+# tìm kq min:
+l = 1;r = 1
+while l<=r:
+    mid = (l+r)//2
+    if check(mid):
+        kq = mid
+        r = mid - 1
+    else:l = mid + 1
+    
+    
+    
+# tìm kq max:
+l = 1;r = 1
+while l<=r:
+    mid = (l+r)//2
+    if check(mid):
+        kq = mid
+        l = mid + 1
+    else:r = mid - 1
+
+
+
+# hàm check(mid): kiểm tra tồn tại 1 đoạn con có độ dài mid mà tổng của chúng là ≥ S
+def check(mid):
+    t = 0
+    for i in range(1,mid+1):t += a[i]
+    if t>=s:return True
+    for i in range(mid+1,n+1):
+        t += a[i]-a[i-mid]
+        if t >= s: return True
+    return False
